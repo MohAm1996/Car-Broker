@@ -1,0 +1,86 @@
+.header {
+    position: fixed;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 4px 6px rgb(237, 237, 237);
+    z-index: 1000;
+
+    .logoDiv {
+        .logo {
+            width: 30px;
+        }
+    }
+
+    .navbar {
+       
+        .menu {
+            display: flex;
+            justify-content: space-between;
+            gap: 3px;
+            .listItem {
+                padding: 5px 10px;
+                border-radius: 5px;
+                cursor: pointer;
+                a {
+                    color: var(--textColor);
+                }
+                
+                &:hover {
+                   a{color: var(--whiteColor); }  
+                    background-color: var(--primaryColor);
+                }
+            }
+        }
+    }
+
+}
+
+
+.closeIcon,
+.gridDotsIcon {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        position: absolute;
+        background-color: var(--secondaryColor);
+        width: 80%;
+        top: 7rem;
+        right: 50%;
+        left: 50%;
+        border-radius: 10px;
+        transform: translate(-50%);
+        text-align: center;
+        padding: 2rem;
+        transition: .3s ease;
+        z-index: 2000;
+        .menu {
+            flex-direction: column;
+        }
+    }
+
+    .closeIcon {
+        display: inline;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -1rem;
+        border-radius: 50%;
+        background: var(--secondaryColor);
+        color: var(--primaryColor);
+        padding: 3px;
+        font-size: 35px;
+
+        &:hover {
+            color: #5542b0;
+        }
+    }
+
+    .gridDotsIcon {
+        display: inline-block;
+        color: var(--primaryColor);
+        margin-left: 10px;
+    }
+}
