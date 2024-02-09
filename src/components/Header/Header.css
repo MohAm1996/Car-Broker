@@ -13,7 +13,6 @@
     }
 
     .navbar {
-       
         .menu {
             display: flex;
             justify-content: space-between;
@@ -41,9 +40,20 @@
 .gridDotsIcon {
     display: none;
 }
-
+.hidden {
+    display: none;
+} 
+.show {
+    display: block;
+}
+@media screen and (min-width: 769px) {
+    .navbar {
+        display: block;
+    }
+}
 @media screen and (max-width: 768px) {
     .navbar {
+        
         position: absolute;
         background-color: var(--secondaryColor);
         width: 80%;
