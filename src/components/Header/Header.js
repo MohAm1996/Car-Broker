@@ -7,7 +7,10 @@ import Navbar from './Navbar';
 function Header() {
     const [showMenu, setShowMenu] = useState(false);
     const toggleMenu = () => {
-        setShowMenu(!showMenu);
+        setShowMenu(true);
+      };
+    const closeMenu = () => {
+        setShowMenu(false);
       };
     return (
        
@@ -15,7 +18,7 @@ function Header() {
             <div className='logoDiv'>
                 <img src={logo} alt='' className='logo' />
             </div>
-           <Navbar menuStats={showMenu} />
+           <Navbar closeMenu={closeMenu} menuState={showMenu} />
 
             <div className="signUp flex ">
                 <div className="text btn primaryBtn">Sign Up</div>

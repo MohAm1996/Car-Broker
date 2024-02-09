@@ -3,38 +3,25 @@ import React, { useEffect,useState } from 'react';
 import { IoIosCloseCircle } from "react-icons/io";
 
 
-function Navbar(props) {
-    const [showMenu, setShowMenu] = useState(props.menuStats);
-    useEffect(() => {
-        setShowMenu(props.menuStats);
-    }, [props.menuStats]);
+function Navbar({menuState,closeMenu}) {
 
-    const toggleMenu = () => {
-        setShowMenu(!showMenu);
-        console.log(showMenu);
-    };
 
-    const closeMenuOnMobile = () => {
-        if (window.innerWidth <= 767) {
-          setShowMenu(false);
-        }
-      };
-    const navbar = <div className={`navbar ${showMenu ? "show" : "hidden"}`}>
+    const navbar = <div className={`navbar ${menuState ? "show" : "hidden"}`}>
         <ul className="menu">
             <li className="listItem">
-                <a href="/" className='link' onClick={closeMenuOnMobile}>Used Cars</a>
+                <a href="/" className='link' >Used Cars</a>
             </li>
             <li className="listItem">
-                <a href="/" className='link' onClick={closeMenuOnMobile}>New Cars</a>
+                <a href="/" className='link' >New Cars</a>
             </li>
             <li className="listItem">
-                <a href="/" className='link' onClick={closeMenuOnMobile}>Aucation</a>
+                <a href="/" className='link' >Aucation</a>
             </li>
             <li className="listItem">
-                <a href="/" className='link' onClick={closeMenuOnMobile}>Sellers</a>
+                <a href="/" className='link' >Sellers</a>
             </li>
         </ul>
-        <IoIosCloseCircle className="icon closeIcon" onClick={toggleMenu} />
+        <IoIosCloseCircle className="icon closeIcon" onClick={closeMenu} />
     </div>
     return navbar;
 }
