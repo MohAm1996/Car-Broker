@@ -1,0 +1,29 @@
+.boxHeader {
+    display: flex;
+    justify-content: space-between;
+    h2 {
+        font-size: 22px;
+        font-weight: 700;
+    }
+    .navigation {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        .right-arrow ,.left-arrow {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--secondaryColor);
+            border-radius: 5px;
+            transition: .3s ease;
+
+            &:hover {
+                color: var(--whiteColor);
+
+                background-color: var(--primaryColor);
+            }
+        }
+    }
+}

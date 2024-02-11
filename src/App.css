@@ -2,9 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  transition: .2s ease-in-out;
   font-family: 'Titillium Web', sans-serif;
-
 }
 :root {
   --primaryColor: #7a63f1;
@@ -47,10 +45,12 @@ p {
   border-radius: 5px;
   color: var(--whiteColor);
   font-size: 12px;
-  &:hover {
+  transition: .3s ease;
+}
+.primaryBtn:hover{
     background-color: var(--secondaryColor);
     color: var(--blackColor);
-  }
+    
 }
 .container {
   padding-left: 1.5rem;
@@ -74,3 +74,50 @@ img {
   color: var(--textColor);
   font-size: 20px;
 }
+body {
+  height: 5000px;;
+}
+
+
+
+
+@media screen and (min-width: 940px) {
+  .section {
+    padding: 6rem 0 4rem;
+  }
+  .container {
+    width: 90%;
+    margin: auto;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .section {
+    padding: 6rem 0 4rem;
+  }
+  .container {
+    width: 75%;
+  }
+}
+::-moz-selection {
+  background: var(--primaryColor);
+  color: var(--whiteColor);
+}
+::selection {
+  background: var(--primaryColor);
+  color: var(--whiteColor);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background: var(--secondaryColor);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primaryColor);
+  border-radius: 3px;
+}
+
+
+
+
+  
