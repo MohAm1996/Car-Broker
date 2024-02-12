@@ -6,7 +6,10 @@ import pic3 from '../../Assets/pngcars3.png'
 import pic4 from '../../Assets/pngcars4.png'
 import pic5 from '../../Assets/pngcars5.png'
 import pic6 from '../../Assets/pngcars6.png'
+import { useEffect } from 'react'
 import CarAuction from './CarAuction'
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 function Auction() {
     const carObj = [
         {
@@ -51,20 +54,22 @@ function Auction() {
             engine: "4.0L V8 Biturbo",
             price: "85,000"
         }
-
-
-
-
-
-    ]
+    ];
+    useEffect(() => {
+        Aos.init(
+            {
+                duration: 2000
+            }
+        )
+    }, [])
     return (
         <div className='auction container'>
             <NavgationScroll title="Active Auctions" />
             <div className="carBox">
-                {carObj.map((car)=>{
-                    return <CarAuction car ={car}/>
+                {carObj.map((car) => {
+                    return <CarAuction car={car} />
                 })}
-            </div>  
+            </div>
         </div>
     )
 }

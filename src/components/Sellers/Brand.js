@@ -1,7 +1,7 @@
 function Brand(props){
     const brand =props.brand;
     return (
-        <div className='brand'>
+        <div data-aos='fade-up' className='brand'>
         <div className='imageDiv'>
             <img src={brand.logo} alt="" />
         </div>

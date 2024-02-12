@@ -4,7 +4,7 @@ function Review(props) {
     const rv = props.review;
     return (
         
-        <div className='review'>
+        <div data-aos='fade-up' className='review'>
             <div className='car'>
                 <div className='imageCar'>
                     <img src={rv.image} alt="" />

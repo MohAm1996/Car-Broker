@@ -1,7 +1,7 @@
 function Car(props) {
     const carObj=props.car;
     return (
-        <div className='car'>
+        <div  data-aos='fade-up' className='car'>
             <div className='imageCar'>
                 <img src={carObj.image} alt="" />
             </div>
