@@ -12,21 +12,21 @@ function Trending(){
             image :image1,
             title :"Used 2019 Audi S4 Premium Plus",
             miles : "15698",
-            engeen :"AWD 4-Cylinder Turbo",
+            engine :"AWD 4-Cylinder Turbo",
             price:"41,400"
         },
         {
             image :image2,
             title :"Used 2019 Audi S4 Premium Plus",
             miles : "2305",
-            engeen :"AWD 4-Cylinder Turbo",
+            engine :"AWD 4-Cylinder Turbo",
             price:"26,400"
         },
         {
             image :image3,
             title :"Used 2019 Audi S4 Premium Plus",
             miles : "12635",
-            engeen :"AWD 4-Cylinder Turbo",
+            engine :"AWD 4-Cylinder Turbo",
             price:"89,400"
         },
 ]

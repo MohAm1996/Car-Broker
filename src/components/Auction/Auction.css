@@ -1,3 +1,79 @@
 .auction {
-    color: rebeccapurple;
+    padding-top: 5rem;
+    .carBox {
+        margin-top: 2rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr))    ;    align-items: center;
+        gap: 1rem;
+        .car {
+            transition: 0.4s ease;
+            padding: 1rem;
+            border-radius: 5px;
+            
+            .imageCar{
+                height: 200px;
+                border-radius: 10px;
+                overflow: hidden;
+                border: 5px solid transparent;
+                transition: 0.2s ease;
+                padding: 20px;
+                img {
+                    height: 100%;
+                    object-fit: contain;
+                }
+                
+            }
+            .description{
+                h3 {
+                    margin-top: 1rem;
+                }
+                .melage{
+                    color: var(--textColor);
+
+                }
+                h4 {
+                    margin-top: 1rem
+                }
+            }
+            .inforamtion{
+                display: flex;
+                gap: 0.5rem;
+                margin: 1rem 0;
+                .price{
+                   border-radius: 3px;
+                   color: var(--primaryColor);
+                   background-color: var(--secondaryColor);
+                   padding: .5rem 1rem;
+                   font-weight: 600;
+                   border: 1px solid transparent;
+                   transition: 0.2s ease;
+                }
+                .buyNow{
+                    border-radius: 3px;
+                    padding: .5rem 1rem;
+                    font-weight: 600;
+                    background-color: var(--primaryColor);
+                    color: var(--whiteColor);
+                    transition: .3s ease;
+                }
+            }
+            &:hover {
+                transform: translateY(-7px);
+            }
+
+        }
+        &> div:nth-child(even){
+            background-color: var(--secondaryColor);
+        }
+        &> div:nth-child(even) .inforamtion .price{
+            border: 1px solid var(--primaryColor);
+        }
+        &> .car:hover {
+            background-color: var(--secondaryColor);
+        }
+        &> .car:hover .inforamtion .price{
+            border: 1px solid var(--primaryColor);
+        }
+        
+    }
 }

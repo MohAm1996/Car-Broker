@@ -1,0 +1,91 @@
+.Review {
+    padding-top: 5rem;
+
+    .reviewsBox {
+
+        margin-top: 2rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        align-items: center;
+        gap: 1rem;
+
+        .car {
+            transition: 0.5s ease;
+
+            .imageCar {
+                height: 200px;
+                border-radius: 10px;
+                overflow: hidden;
+                border: 5px solid transparent;
+                transition: 0.2s ease;
+
+                img {
+                    height: 100%;
+                    object-fit: cover;
+                }
+
+            }
+
+            .carInfo {
+                h3 {
+                    margin-top: 1rem;
+                    color: var(--blackColor);
+
+                }
+
+                .description {
+                    color: var(--textColor);
+
+                }
+
+            }
+            .client {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: 1rem;
+                .clientInfo {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    .image {
+                        width: 40px;
+                        height: 40px;
+                        overflow: hidden;
+                        border-radius: 50%;
+                        border: 2px solid var(--whiteColor);
+                        box-shadow: 0 4px 5px rgb(222, 222, 222);
+                    }
+                    .info h3 {
+                        color: var(--blackColor);
+                        font-size: 18px;
+                    }
+                }
+                .rating {
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+                    .starIcon {
+                        color: orange;
+                    }
+                    .rate {
+                        font-weight: 600;
+                    }
+                }
+            }
+
+
+            &:hover {
+                transform: translateY(-7px);
+            }
+
+            &:hover .imageCar {
+
+                border: 5px solid var(--primaryColor);
+
+            }
+        }
+
+
+    }
+}

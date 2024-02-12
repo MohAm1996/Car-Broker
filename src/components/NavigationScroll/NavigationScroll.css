@@ -4,6 +4,7 @@
     h2 {
         font-size: 22px;
         font-weight: 700;
+        color: var(--blackColor);
     }
     .navigation {
         display: flex;

@@ -1,4 +1,4 @@
-function Car(props) {
+function CarAuction(props) {
     const carObj=props.car;
     return (
         <div className='car'>
@@ -12,11 +12,12 @@ function Car(props) {
             </div>
             <div className="inforamtion">
                 <div className='price'>${carObj.price}</div>
-                <div className='bestSeller'>Best Seller</div>
+                <div className='buyNow'>Buy Now</div>
             </div>
         </div>
+        
     )
 }
 
 
-export default Car;
+export default CarAuction;
